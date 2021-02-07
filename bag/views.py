@@ -67,11 +67,12 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """ remove the item from the shopping bag """
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
-    bag = request.session.get('bag', {})
     try:
+        size = None
+        if 'product_size' in request.POST:
+            size = request.POST['product_size']
+        bag = request.session.get('bag', {})
+    
         if size:
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
