@@ -27,7 +27,7 @@ SECRET_KEY = 'ir)@d@_uhfic8vy8ma0$ch$xz+w9ehohrxvorjl+af5=c&b-4k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['boutique-ado-vtom.herokuapp.com', 'localhost']
 
 
 # Application definition
